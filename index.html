@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockElevate - Central Hub Ecosystem</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="chatbot/css/chatbot.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Block<span class="backwards-e">E</span>levate</h1>
+                <p class="tagline">"BEcoming Within"</p>
+            </div>
+            <div class="user-info" id="user-info" style="display: none;">
+                <span id="user-name"></span>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <div id="login-section" class="login-container">
+            <div class="login-form">
+                <h2>Access Central Hub</h2>
+                <form id="login-form">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="demo-accounts">
+                    <h3>Demo Accounts:</h3>
+                    <button class="demo-btn" data-role="inmate">Inmate Access</button>
+                    <button class="demo-btn" data-role="staff">Staff Access</button>
+                    <button class="demo-btn" data-role="admin">Admin Access</button>
+                    <button class="demo-btn" data-role="external">External Resource</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="dashboard-section" style="display: none;">
+            <nav class="platform-nav">
+                <button class="nav-btn active" data-platform="profile">Profile</button>
+                <button class="nav-btn" data-platform="mental-health">Mental Health</button>
+                <button class="nav-btn" data-platform="programs">Programs</button>
+                <button class="nav-btn" data-platform="resources">Resources</button>
+                <button class="nav-btn" data-platform="progress">Progress</button>
+                <button class="nav-btn admin-only" data-platform="admin" style="display: none;">Admin</button>
+            </nav>
+
+            <main id="main-content">
+                <!-- Platform content will be loaded here -->
+            </main>
+        </div>
+    </div>
+
+    <script src="public/js/app.js"></script>
+    <script src="chatbot/js/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+// Example Document Structure for the 'user_activity' Collection
+
+{
+    // A single, globally unique ID for this activity event
+    "_id": ObjectId("665a3c94f0a2c3d1e4f5a6b7"), 
+
+    // UUID of the User (Foreign Key to PostgreSQL's users.user_id)
+    "user_id": "8f8b7c7a-d6e3-4b9e-9d0a-0c1b2a3d4e5f", 
+
+    // The core event being tracked
+    "event_type": "FEATURE_USED", 
+
+    // Timestamp for when the event occurred (Crucial for time-series analysis)
+    "timestamp": ISODate("2025-10-12T19:30:00.123Z"),
+
+    // Contextual data about where the event happened
+    "platform_source": "Platform_1_Core",
+    "page_url": "/dashboard/settings",
+
+    // Detailed, flexible payload specific to the event type
+    "details": {
+        "feature_name": "Export_Report",
+        "format": "PDF",
+        "file_size_kb": 245,
+        "success": true
+    },
+
+    // Optional: Reference to another document if needed (e.g., the report ID)
+    "related_id": "rptid-12345"
+}
